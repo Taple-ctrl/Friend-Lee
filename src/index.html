@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,62 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Tittle</title>
 </head>
+
 <body>
-    
+
+    <main>
+        <div class="calculator">
+            <div class="calculator-title">Рассчитайте стоимость<br />автомобиля в лизинг</div>
+            <div class="calculator__content">
+                <div class="calculator__content-list">
+                    <div class="calculator__content-list--box">
+                        <div class="calculator__content-list--title">Стоимость автомобиля</div>
+                        <div class="calculator__content-list--input">
+                            <div class="calculator__content-list--text">
+                                <div class="calculator__content-list--text---number">3 300 000</div>
+                                <div class="calculator__content-list--text---currency">₽</div>
+                            </div>
+                            <input type="range" min="1500000" max="10000000" value="3300000">
+                        </div>
+                    </div>
+                    <div class="calculator__content-list--box">
+                        <div class="calculator__content-list--title">Первоначальный взнос</div>
+                        <div class="calculator__content-list--input">
+                            <div class="calculator__content-list--text">
+                                <div class="calculator__content-list--text---number">420 000 ₽</div>
+                                <div class="calculator__content-list--text---currency-procent">
+                                    13%
+                                </div>
+                            </div>
+                            <input type="range" min="1500000" max="10000000" value="3300000">
+                        </div>
+                    </div>
+                    <div class="calculator__content-list--box">
+                        <div class="calculator__content-list--title">Срок лизинга</div>
+                        <div class="calculator__content-list--input">
+                            <div class="calculator__content-list--text">
+                                <div class="calculator__content-list--text---number">60</div>
+                                <div class="calculator__content-list--text---currency">мес.</div>
+                            </div>
+                            <input type="range" min="1500000" max="10000000" value="3300000">
+                        </div>
+                    </div>
+                    <div class="calculator__content-list--result">
+                        <div class="calculator__content-list--title">Сумма договора лизинга</div>
+                        <h1>4 467 313 ₽</h1>
+                    </div>
+                    <div class="calculator__content-list--result">
+                        <div class="calculator__content-list--title">Сумма договора лизинга</div>
+                        <h1>114 455 ₽</h1>
+                    </div>
+                    <div class="calculator__content-list--btn">
+                        <button>Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
+
 </html>
