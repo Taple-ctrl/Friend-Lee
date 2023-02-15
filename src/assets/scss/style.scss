@@ -7,12 +7,25 @@
 
 // Fonts
 
+// Nekst-Black
 @font-face {
     font-family: 'Nekst-Black';
-    src: url('./../fonts/nekst/Nekst-Black.eot');
-    src: url('./../fonts/nekst/Nekst-Black.woff2') format('woff2'),
-        url('./../fonts/nekst/Nekst-Black.woff') format('woff'),
-        url('./../fonts/nekst/Nekst-Black.ttf') format('truetype');
+    src: url('./../fonts/Nekst-Black/Nekst-Black.eot');
+    src: local('Nekst-Black'), local('Nekst-Black'),
+        url('./../fonts/Nekst-Black/Nekst-Black.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Nekst-Black/Nekst-Black.woff2') format('woff2'),
+        url('./../fonts/Nekst-Black/Nekst-Black.woff') format('woff'),
+        url('./../fonts/Nekst-Black/Nekst-Black.ttf') format('truetype');
+}
+// Gilroy
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./../fonts/Gilroy/Gilroy-Black.eot');
+    src: local('Gilroy'), local('Nekst-Black'),
+        url('./../fonts/Gilroy/Gilroy-Black.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Gilroy/Gilroy-Black.woff2') format('woff2'),
+        url('./../fonts/Gilroy/Gilroy-Black.woff') format('woff'),
+        url('./../fonts/Gilroy/Gilroy-Black.ttf') format('truetype');
 }
 
 
@@ -100,14 +113,7 @@ body {
                         }
                     }
 
-                    & input[type='range'] {
-                        position: absolute;
-                        background: #E1E1E1;
-                        bottom: 0;
-                        appearance: none;
-                        width: 379px;
-                        height: 2px;
-                    }
+
 
                     & input[type='range']::-webkit-slider-thumb {
                         -webkit-appearance: none !important;
@@ -115,6 +121,46 @@ body {
                         border-radius: 100%;
                         height: 20px;
                         width: 20px;
+                    }
+
+
+                    #priceCar {
+                        position: absolute;
+                        bottom: 0;
+                        background: linear-gradient(to right, #FF9514 0%, #FF9514 21%, #E1E1E1 21%, #E1E1E1 100%);
+                        border: none;
+                        border-radius: 8px;
+                        height: 2px;
+                        width: 379px;
+                        outline: none;
+                        transition: background 450ms ease-in;
+                        appearance: none;
+                    }
+
+                    #initialPay {
+                        position: absolute;
+                        bottom: 0;
+                        background: linear-gradient(to right, #FF9514 0%, #FF9514 21%, #E1E1E1 21%, #E1E1E1 100%);
+                        border: none;
+                        border-radius: 8px;
+                        height: 2px;
+                        width: 379px;
+                        outline: none;
+                        transition: background 450ms ease-in;
+                        appearance: none;
+                    }
+
+                    #leaseTerm {
+                        position: absolute;
+                        bottom: 0;
+                        background: linear-gradient(to right, #FF9514 0%, #FF9514 50%, #E1E1E1 50%, #E1E1E1 100%);
+                        border: none;
+                        border-radius: 8px;
+                        height: 2px;
+                        width: 379px;
+                        outline: none;
+                        transition: background 450ms ease-in;
+                        appearance: none;
                     }
                 }
             }
@@ -126,8 +172,8 @@ body {
 
                 .calculator__content-list--title {
                     font-family: 'Gilroy';
+                    font-weight: normal;
                     font-style: normal;
-                    font-weight: 400;
                     font-size: 16px;
 
                     color: #575757;
