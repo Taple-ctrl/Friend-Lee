@@ -36,6 +36,7 @@ body {
     display: flex;
     align-items: center;
     min-height: 100vh;
+
     @media screen and (min-width: 1440px) {
         justify-content: center;
     }
@@ -137,6 +138,7 @@ body {
                     width: 427px;
                     height: 68px;
                     background: #F3F3F4;
+                    border: 2px solid #F3F3F4;
                     border-radius: 16px;
                     padding: 0 24px;
                     display: flex;
@@ -158,9 +160,23 @@ body {
                         font-size: 30px;
                         color: #575757;
 
-                        @media screen and (max-width: 320px) {
-                            color: #333E48;
-                            font-size: 22px;
+                        & input {
+                            font-family: Nekst-Black;
+                            font-style: normal;
+                            font-weight: 900;
+                            font-size: 30px;
+                            color: #575757;
+                            outline: none;
+                            background-color: rgb(0, 0, 0, 0);
+                            width: 100%;
+                            @media screen and (max-width: 320px) {
+                                color: #333E48;
+                                font-size: 22px;
+                            }
+                        }
+
+                        & input:-webkit-autofill {
+                            background: red;
                         }
 
                         .calculator__content-list--text---currency-procent {
@@ -300,11 +316,21 @@ body {
                     font-weight: 900;
                     font-size: 30px;
                     color: #FFFFFF;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: #111111;
+                    }
+
+                    &:active {
+                        background: #575757;
+                    }
 
                     @media screen and (max-width: 768px) {
                         font-size: 3.91vw;
                         height: 8.85vw;
                     }
+
                     @media screen and (max-width: 320px) {
                         height: 18.75vw;
                         font-size: 6.88vw;

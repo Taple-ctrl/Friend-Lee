@@ -12,14 +12,14 @@
 <body>
     <main>
         <div class="calculator">
-            <div class="calculator-title">Рассчитайте стоимость<br />автомобиля в лизинг</div>
+            <div class="calculator-title">Рассчитайте стоимость<br>автомобиля в лизинг</div>
             <div class="calculator__content">
                 <div class="calculator__content-list">
                     <div class="calculator__content-list--box carPrice">
                         <div class="calculator__content-list--title">Стоимость автомобиля</div>
                         <div class="calculator__content-list--input">
                             <div class="calculator__content-list--text">
-                                <div class="calculator__content-list--text---number">3 300 000</div>
+                                <input class="calculator__content-list--text---number" value="3 300 000" onfocus="document.querySelector('.calculator__content-list--input').style.background = 'none';" onblur="document.querySelector('.calculator__content-list--input').style.background = '#F3F3F4';">
                                 <div class="calculator__content-list--text---currency">₽</div>
                             </div>
                             <input id="priceCar" type="range" min="1500000" max="10000000" value="3300000">
