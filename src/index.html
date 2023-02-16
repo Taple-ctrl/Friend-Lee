@@ -27,9 +27,9 @@
                     </div>
                     <div class="calculator__content-list--box initialPay">
                         <div class="calculator__content-list--title">Первоначальный взнос</div>
-                        <div class="calculator__content-list--input">
+                        <div class="calculator__content-list--input calculator__content-list--input-initialPay">
                             <div class="calculator__content-list--text">
-                                <div class="calculator__content-list--text---number">420 000 ₽</div>
+                                <input class="calculator__content-list--text---number" value="420 000 ₽" onfocus="document.querySelector('.calculator__content-list--input-initialPay').style.background = 'none';" onblur="document.querySelector('.calculator__content-list--input-initialPay').style.background = '#F3F3F4';">
                                 <div class="calculator__content-list--text---currency-procent">
                                     13%
                                 </div>
@@ -39,9 +39,9 @@
                     </div>
                     <div class="calculator__content-list--box leaseTerm">
                         <div class="calculator__content-list--title">Срок лизинга</div>
-                        <div class="calculator__content-list--input">
+                        <div class="calculator__content-list--input calculator__content-list--input-leaseTerm">
                             <div class="calculator__content-list--text">
-                                <div class="calculator__content-list--text---number">60</div>
+                                <input class="calculator__content-list--text---number" value="60" onfocus="document.querySelector('.calculator__content-list--input-leaseTerm').style.background = 'none';" onblur="document.querySelector('.calculator__content-list--input-leaseTerm').style.background = '#F3F3F4';">
                                 <div class="calculator__content-list--text---currency">мес.</div>
                             </div>
                             <input id="leaseTerm" type="range" min="6" max="120" value="60">
