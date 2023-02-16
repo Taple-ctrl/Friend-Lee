@@ -10,13 +10,12 @@
 </head>
 
 <body>
-    
     <main>
         <div class="calculator">
             <div class="calculator-title">Рассчитайте стоимость<br />автомобиля в лизинг</div>
             <div class="calculator__content">
                 <div class="calculator__content-list">
-                    <div class="calculator__content-list--box">
+                    <div class="calculator__content-list--box carPrice">
                         <div class="calculator__content-list--title">Стоимость автомобиля</div>
                         <div class="calculator__content-list--input">
                             <div class="calculator__content-list--text">
@@ -26,7 +25,7 @@
                             <input id="priceCar" type="range" min="1500000" max="10000000" value="3300000">
                         </div>
                     </div>
-                    <div class="calculator__content-list--box">
+                    <div class="calculator__content-list--box initialPay">
                         <div class="calculator__content-list--title">Первоначальный взнос</div>
                         <div class="calculator__content-list--input">
                             <div class="calculator__content-list--text">
@@ -38,7 +37,7 @@
                             <input id="initialPay" type="range" min="1500000" max="10000000" value="3300000">
                         </div>
                     </div>
-                    <div class="calculator__content-list--box">
+                    <div class="calculator__content-list--box leaseTerm">
                         <div class="calculator__content-list--title">Срок лизинга</div>
                         <div class="calculator__content-list--input">
                             <div class="calculator__content-list--text">
@@ -48,11 +47,11 @@
                             <input id="leaseTerm" type="range" min="6" max="120" value="60">
                         </div>
                     </div>
-                    <div class="calculator__content-list--result">
+                    <div class="calculator__content-list--result result-lease">
                         <div class="calculator__content-list--title">Сумма договора лизинга</div>
                         <h1>4 467 313 ₽</h1>
                     </div>
-                    <div class="calculator__content-list--result">
+                    <div class="calculator__content-list--result monthly-payment">
                         <div class="calculator__content-list--title">Сумма договора лизинга</div>
                         <h1>114 455 ₽</h1>
                     </div>
@@ -64,8 +63,7 @@
         </div>
     </main>
 
-
-<script src="./assets/js/main.min.js"></script>
+    <script src="./assets/js/main.min.js"></script>
 </body>
 
 </html>

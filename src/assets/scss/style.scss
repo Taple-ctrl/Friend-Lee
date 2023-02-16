@@ -17,15 +17,16 @@
         url('./../fonts/Nekst-Black/Nekst-Black.woff') format('woff'),
         url('./../fonts/Nekst-Black/Nekst-Black.ttf') format('truetype');
 }
+
 // Gilroy
 @font-face {
     font-family: 'Gilroy';
-    src: url('./../fonts/Gilroy/Gilroy-Black.eot');
-    src: local('Gilroy'), local('Nekst-Black'),
-        url('./../fonts/Gilroy/Gilroy-Black.eot?#iefix') format('embedded-opentype'),
-        url('./../fonts/Gilroy/Gilroy-Black.woff2') format('woff2'),
-        url('./../fonts/Gilroy/Gilroy-Black.woff') format('woff'),
-        url('./../fonts/Gilroy/Gilroy-Black.ttf') format('truetype');
+    src: url('./../fonts/Gilroy/Gilroy-Regular.eot');
+    src: local('Gilroy'), local('Gilroy'),
+        url('./../fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./../fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+        url('./../fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+        url('./../fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
 }
 
 
@@ -34,11 +35,25 @@
 body {
     display: flex;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
+    @media screen and (min-width: 1440px) {
+        justify-content: center;
+    }
 }
 
 .calculator {
+    @media screen and (max-width: 1440px) {
+        padding: 0 48px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0 36px;
+    }
+
+    @media screen and (max-width: 320px) {
+        padding: 0 20px;
+    }
+
     .calculator-title {
         font-family: 'Nekst-Black';
         font-style: normal;
@@ -53,16 +68,57 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            column-gap: 32px;
-            row-gap: 51px;
             grid-template-areas:
-                ". . ."
-                ". . .";
+                "carPrice initialPay leaseTerm"
+                "result-lease monthly-payment calculator__content-list--btn";
+            column-gap: 2.22vw;
+            row-gap: 3.54vw;
+
+            .carPrice {
+                grid-area: carPrice;
+            }
+
+            .initialPay {
+                grid-area: initialPay;
+            }
+
+            .leaseTerm {
+                grid-area: leaseTerm;
+            }
+
+            .result-lease {
+                grid-area: result-lease;
+            }
+
+            .monthly-payment {
+                grid-area: monthly-payment;
+            }
+
+            @media screen and (max-width: 768px) {
+                grid-template-columns: minmax(150px, 1.33fr) 1fr;
+                grid-template-rows: 1fr 1fr 1fr 12.42vw 68px;
+                grid-template-areas:
+                    "carPrice carPrice"
+                    "initialPay initialPay"
+                    "leaseTerm leaseTerm"
+                    "result-lease monthly-payment"
+                    "calculator__content-list--btn .";
+            }
+
+            @media screen and (max-width: 320px) {
+                display: flex;
+                flex-direction: column;
+            }
+
 
             .calculator__content-list--box {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+
+                @media screen and (max-width: 768px) {
+                    gap: 3.13vw;
+                }
 
                 .calculator__content-list--title {
                     font-family: 'Gilroy';
@@ -87,6 +143,10 @@ body {
                     align-content: center;
                     justify-content: center;
 
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+
                     .calculator__content-list--text {
                         display: flex;
                         align-items: center;
@@ -97,6 +157,11 @@ body {
                         font-weight: 900;
                         font-size: 30px;
                         color: #575757;
+
+                        @media screen and (max-width: 320px) {
+                            color: #333E48;
+                            font-size: 22px;
+                        }
 
                         .calculator__content-list--text---currency-procent {
                             font-family: 'Nekst-Black';
@@ -110,6 +175,11 @@ body {
                             padding: 15px 17px;
 
                             color: #575757;
+
+                            @media screen and (max-width: 320px) {
+                                color: #333E48;
+                                font-size: 22px;
+                            }
                         }
                     }
 
@@ -135,6 +205,10 @@ body {
                         outline: none;
                         transition: background 450ms ease-in;
                         appearance: none;
+
+                        @media screen and (max-width: 768px) {
+                            width: 94%;
+                        }
                     }
 
                     #initialPay {
@@ -148,6 +222,10 @@ body {
                         outline: none;
                         transition: background 450ms ease-in;
                         appearance: none;
+
+                        @media screen and (max-width: 768px) {
+                            width: 94%;
+                        }
                     }
 
                     #leaseTerm {
@@ -161,6 +239,11 @@ body {
                         outline: none;
                         transition: background 450ms ease-in;
                         appearance: none;
+
+                        @media screen and (max-width: 768px) {
+                            width: 94%;
+                            background: linear-gradient(to right, #FF9514 0%, #FF9514 48%, #E1E1E1 48%, #E1E1E1 100%);
+                        }
                     }
                 }
             }
@@ -177,6 +260,15 @@ body {
                     font-size: 16px;
 
                     color: #575757;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 2.08vw;
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        font-size: 4.38vw;
+                        color: #333E48;
+                    }
                 }
 
                 & h1 {
@@ -186,6 +278,10 @@ body {
                     font-size: 54px;
 
                     color: #333333;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 7.03vw;
+                    }
                 }
             }
 
@@ -204,6 +300,15 @@ body {
                     font-weight: 900;
                     font-size: 30px;
                     color: #FFFFFF;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 3.91vw;
+                        height: 8.85vw;
+                    }
+                    @media screen and (max-width: 320px) {
+                        height: 18.75vw;
+                        font-size: 6.88vw;
+                    }
                 }
             }
         }
