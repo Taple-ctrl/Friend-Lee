@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Tittle</title>
+</head>
+
+<body>
+    <main>
+        <div class="calculator">
+            <div class="calculator-title">Рассчитайте стоимость<br>автомобиля в лизинг</div>
+            <div class="calculator__content">
+                <div class="calculator__content-list">
+                    <div class="calculator__content-list--box carPrice">
+                        <div class="calculator__content-list--title">Стоимость автомобиля</div>
+                        <div class="calculator__content-list--input">
+                            <div class="calculator__content-list--text">
+                                <input class="calculator__content-list--text---number" value="3 300 000" onfocus="document.querySelector('.calculator__content-list--input').style.background = 'none';" onblur="document.querySelector('.calculator__content-list--input').style.background = '#F3F3F4';">
+                                <div class="calculator__content-list--text---currency">₽</div>
+                            </div>
+                            <input id="priceCar" type="range" min="1500000" max="10000000" value="3300000">
+                        </div>
+                    </div>
+                    <div class="calculator__content-list--box initialPay">
+                        <div class="calculator__content-list--title">Первоначальный взнос</div>
+                        <div class="calculator__content-list--input calculator__content-list--input-initialPay">
+                            <div class="calculator__content-list--text">
+                                <input class="calculator__content-list--text---number" value="420 000 ₽" onfocus="document.querySelector('.calculator__content-list--input-initialPay').style.background = 'none';" onblur="document.querySelector('.calculator__content-list--input-initialPay').style.background = '#F3F3F4';">
+                                <div class="calculator__content-list--text---currency-procent">
+                                    13%
+                                </div>
+                            </div>
+                            <input id="initialPay" type="range" min="1500000" max="10000000" value="3300000">
+                        </div>
+                    </div>
+                    <div class="calculator__content-list--box leaseTerm">
+                        <div class="calculator__content-list--title">Срок лизинга</div>
+                        <div class="calculator__content-list--input calculator__content-list--input-leaseTerm">
+                            <div class="calculator__content-list--text">
+                                <input class="calculator__content-list--text---number" value="60" onfocus="document.querySelector('.calculator__content-list--input-leaseTerm').style.background = 'none';" onblur="document.querySelector('.calculator__content-list--input-leaseTerm').style.background = '#F3F3F4';">
+                                <div class="calculator__content-list--text---currency">мес.</div>
+                            </div>
+                            <input id="leaseTerm" type="range" min="6" max="120" value="60">
+                        </div>
+                    </div>
+                    <div class="calculator__content-list--result result-lease">
+                        <div class="calculator__content-list--title">Сумма договора лизинга</div>
+                        <h1>4 467 313 ₽</h1>
+                    </div>
+                    <div class="calculator__content-list--result monthly-payment">
+                        <div class="calculator__content-list--title">Сумма договора лизинга</div>
+                        <h1>114 455 ₽</h1>
+                    </div>
+                    <div class="calculator__content-list--btn">
+                        <button>Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/main.min.js"></script>
+</body>
+
+</html>

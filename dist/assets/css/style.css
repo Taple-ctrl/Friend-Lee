@@ -1,0 +1,348 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Nekst-Black";
+  src: url("./../fonts/Nekst-Black/Nekst-Black.eot");
+  src: local("Nekst-Black"), local("Nekst-Black"), url("./../fonts/Nekst-Black/Nekst-Black.eot?#iefix") format("embedded-opentype"), url("./../fonts/Nekst-Black/Nekst-Black.woff2") format("woff2"), url("./../fonts/Nekst-Black/Nekst-Black.woff") format("woff"), url("./../fonts/Nekst-Black/Nekst-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gilroy";
+  src: url("./../fonts/Gilroy/Gilroy-Regular.eot");
+  src: local("Gilroy"), local("Gilroy"), url("./../fonts/Gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("./../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"), url("./../fonts/Gilroy/Gilroy-Regular.woff") format("woff"), url("./../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .calculator {
+        padding: 0 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .calculator {
+        padding: 0 36px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculator {
+        padding: 0 20px;
+    }
+}
+
+.calculator .calculator-title {
+    font-family: "Nekst-Black";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 90%;
+    margin-bottom: 32px;
+}
+
+.calculator .calculator__content .calculator__content-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "carPrice initialPay leaseTerm" "result-lease monthly-payment calculator__content-list--btn";
+    -moz-column-gap: 2.22vw;
+    column-gap: 2.22vw;
+    row-gap: 3.54vw;
+}
+
+.calculator .calculator__content .calculator__content-list .carPrice {
+    grid-area: carPrice;
+}
+
+.calculator .calculator__content .calculator__content-list .initialPay {
+    grid-area: initialPay;
+}
+
+.calculator .calculator__content .calculator__content-list .leaseTerm {
+    grid-area: leaseTerm;
+}
+
+.calculator .calculator__content .calculator__content-list .result-lease {
+    grid-area: result-lease;
+}
+
+.calculator .calculator__content .calculator__content-list .monthly-payment {
+    grid-area: monthly-payment;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list {
+        grid-template-columns: minmax(150px, 1.33fr) 1fr;
+        grid-template-rows: 1fr 1fr 1fr 12.42vw 68px;
+        grid-template-areas: "carPrice carPrice" "initialPay initialPay" "leaseTerm leaseTerm" "result-lease monthly-payment" "calculator__content-list--btn .";
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculator .calculator__content .calculator__content-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box {
+        gap: 3.13vw;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #575757;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input {
+    position: relative;
+    width: 427px;
+    height: 68px;
+    background: #F3F3F4;
+    border: 2px solid #F3F3F4;
+    border-radius: 16px;
+    padding: 0 24px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input {
+        width: 100%;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input .calculator__content-list--text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: "Nekst-Black";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    color: #575757;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input .calculator__content-list--text input {
+    font-family: Nekst-Black;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    color: #575757;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input .calculator__content-list--text input {
+        color: #333E48;
+        font-size: 22px;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input .calculator__content-list--text input:-webkit-autofill {
+    background: red;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input .calculator__content-list--text .calculator__content-list--text---currency-procent {
+    font-family: "Nekst-Black";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    background: #EBEBEC;
+    border-radius: 16px;
+    padding: 15px 17px;
+    color: #575757;
+}
+
+@media screen and (max-width: 320px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input .calculator__content-list--text .calculator__content-list--text---currency-procent {
+        color: #333E48;
+        font-size: 22px;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #FF9514;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input #priceCar {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #FF9514 0%, #FF9514 21%, #E1E1E1 21%, #E1E1E1 100%);
+    border: none;
+    border-radius: 8px;
+    height: 2px;
+    width: 379px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input #priceCar {
+        width: 94%;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input #initialPay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #FF9514 0%, #FF9514 21%, #E1E1E1 21%, #E1E1E1 100%);
+    border: none;
+    border-radius: 8px;
+    height: 2px;
+    width: 379px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input #initialPay {
+        width: 94%;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input #leaseTerm {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to right, #FF9514 0%, #FF9514 50%, #E1E1E1 50%, #E1E1E1 100%);
+    border: none;
+    border-radius: 8px;
+    height: 2px;
+    width: 379px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--box .calculator__content-list--input #leaseTerm {
+        width: 94%;
+        background: linear-gradient(to right, #FF9514 0%, #FF9514 48%, #E1E1E1 48%, #E1E1E1 100%);
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--result {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--result .calculator__content-list--title {
+    font-family: "Gilroy";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #575757;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--result .calculator__content-list--title {
+        font-size: 2.08vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--result .calculator__content-list--title {
+        font-size: 4.38vw;
+        color: #333E48;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--result h1 {
+    font-family: "Nekst-Black";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 54px;
+    color: #333333;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--result h1 {
+        font-size: 7.03vw;
+    }
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--btn button {
+    background: #FF9514;
+    border-radius: 40px;
+    width: 426px;
+    height: 68px;
+    font-family: "Nekst-Black";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--btn button:hover {
+    background: #111111;
+}
+
+.calculator .calculator__content .calculator__content-list .calculator__content-list--btn button:active {
+    background: #575757;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--btn button {
+        font-size: 3.91vw;
+        height: 8.85vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculator .calculator__content .calculator__content-list .calculator__content-list--btn button {
+        height: 18.75vw;
+        font-size: 6.88vw;
+    }
+}
